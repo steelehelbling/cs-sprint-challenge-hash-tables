@@ -23,11 +23,30 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+
+Hashing function returns the hash value of the object if it has one. Hash values are integers. They are used to quickly compare dictionary keys during a dictionary lookup. Numeric values that compare equal have the same hash value 
+
 2. Collision resolution
+
+When two items hash to the same slot, we must have a systematic method for placing the second item in the hash table. This process is called collision resolution. if the hash function is perfect, collisions will never occur. However collision resolution becomes a very important part of hashing when this is not the case
+
 3. Performance of basic hash table operations
+
+Suppose we are using a chained hash table with capacity of buckets and the number of elements in the hash table is num. Then the average number of items per bucket is num/capacity which is called the load factor of the hash table. When an item that is not in the hash table is searched for the expected length of the linked list traversed is Load factor. Since there is always the initial constant cost of hashing the cost of hash table operations with a good hash function is on average, O(1 + Load factor). If we can ensure that the load factor never exceeds some fixed max value then all operations will be O(1).
+
 4. Load factor
+
+Suppose we are using a chained hash table with capacity of buckets and the number of elements in the hash table is num. Then the average number of items per bucket is num/capacity which is called the load factor of the hash table.
+
 5. Automatic resizing
+
+Resizing works so that the hash table does not get to large or to small
+Increase the size if it gets to full decrease the size if it is to empty
+to Resize a hash table select a new hash function to map to a new size then create a new hash table of the new size looping through the items of the old table and adding them into the new table.
+
 6. Various use cases for hash tables
+
+can use any time you need a key value pair and want the flexibility to change its size by sizing it add or delete new one or want to set the amount of items preslicely
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -46,14 +65,14 @@ We expect you to be able to answer questions in these areas. Your responses cont
 
 Your finished project must include all of the following requirements:
 
-- [ ] Solve any three of the five problems
+- [x] Solve any three of the five problems
 
 For each problem that you choose to solve, complete the following:
 
-- [ ] Navigate into each exercise's directory
-- [ ] Read the instructions for the exercise in the README
-- [ ] Implement your solution in the `.py` skeleton file
-- [ ] Make sure your code passes the tests running the test script with make tests
+- [x] Navigate into each exercise's directory
+- [x] Read the instructions for the exercise in the README
+- [x] Implement your solution in the `.py` skeleton file
+- [x] Make sure your code passes the tests running the test script with make tests
 
 *Note: For these exercises, we expect you to use Python's built-in `dict` as a hashtable. That said, if you wish, you can attempt to solve using your own hashtable implementation, as well. All solutions should utilize a `dict` or hashtable. You should not use Sets. (Though you can make a `dict` behave like a set if you wish.)*
 
@@ -68,6 +87,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps to complete your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete after receiving your pull-request
