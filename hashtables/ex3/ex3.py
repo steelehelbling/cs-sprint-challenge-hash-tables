@@ -3,7 +3,10 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
+    inside = {}
+    for list_array in arrays:
+        for array in list_array:
+           result = inside[array]
     return result
 
 
